@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  function myFunction() {
+      var inpObj = document.getElementById("id1,id2,id3");
+      if (!inpObj.checkValidity()) {
+          document.getElementById("demo").innerHTML = inpObj.validationMessage;
+      } else {
+          document.getElementById("demo").innerHTML = "Input OK";
+      }
+  }
+  </script>
+</head>
+<body>
+<h3>Enter your name:</h3>
+<form  method="post">
+<input type="text" name="fname" value="john" required>
+<h3>Email:</h3>
+<input type="email" name="email" value="abcd@fgh.rgg"required>
+
+<p id="demo"></p>
+<h3>Your age:</h3>
+<input id="id1" type="number" min="18" max="40" required>
+<button onclick="myFunction()">OK</button><br><br>
+
+<h3>Select gender:</h3>
+<input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+
+<h3>MOBILE NUMBER:</h3>
+<input id="id2" type="number" min="01" max="16" required>
+<button onclick="myFunction()">OK</button>
+<h3>CGPA:</h3>
+<input id="id3" type="number" min="0.00" max="4.00" required>
+<button onclick="myFunction()">OK</button><br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
